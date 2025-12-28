@@ -9,52 +9,53 @@ const TechStack = () => {
             title: "Languages",
             items: [
                 { name: "Python", icon: "🐍" },
-                { name: "JavaScript", icon: "📜" },
-                { name: "TypeScript", icon: "📘" },
                 { name: "Java", icon: "☕" },
-                { name: "Go", icon: "🔵" },
-                { name: "Rust", icon: "🦀" },
+                { name: "Kotlin", icon: "📱" },
                 { name: "SQL", icon: "🗃️" },
-                { name: "Bash", icon: "💻" }
+                { name: "HTML", icon: "🌐" },
+                { name: "CSS", icon: "🎨" }
             ]
         },
         {
-            title: "Frameworks",
+            title: "Frameworks & Web",
             items: [
                 { name: "React", icon: "⚛️" },
-                { name: "Next.js", icon: "▲" },
-                { name: "Node.js", icon: "🟢" },
+                { name: "Node JS", icon: "🟢" },
                 { name: "FastAPI", icon: "⚡" },
-                { name: "Django", icon: "🎸" },
                 { name: "Flask", icon: "🌶️" },
-                { name: "Express", icon: "🚂" },
-                { name: "Spring Boot", icon: "🍃" }
+                { name: "Django", icon: "🎸" },
+                { name: "Streamlit", icon: "🚀" }
             ]
         },
         {
-            title: "AI & ML Tools",
+            title: "AI & Machine Learning",
             items: [
                 { name: "TensorFlow", icon: "🧠" },
-                { name: "PyTorch", icon: "🔥" },
                 { name: "Scikit-learn", icon: "📊" },
                 { name: "Hugging Face", icon: "🤗" },
-                { name: "OpenCV", icon: "👁️" },
+                { name: "NLTK", icon: "✂️" },
                 { name: "LangChain", icon: "🔗" },
-                { name: "Keras", icon: "🔶" },
-                { name: "MLflow", icon: "📈" }
+                { name: "RAG", icon: "📚" }
             ]
         },
         {
-            title: "Databases & Cloud",
+            title: "Data & Automation",
+            items: [
+                { name: "Pandas", icon: "🐼" },
+                { name: "NumPy", icon: "🔢" },
+                { name: "Matplotlib", icon: "📈" },
+                { name: "Selenium", icon: "🤖" },
+                { name: "Playwright", icon: "🎭" },
+                { name: "Docker", icon: "🐳" }
+            ]
+        },
+        {
+            title: "Databases",
             items: [
                 { name: "PostgreSQL", icon: "🐘" },
-                { name: "MongoDB", icon: "🍃" },
-                { name: "Redis", icon: "🔴" },
-                { name: "AWS", icon: "☁️" },
-                { name: "GCP", icon: "🌈" },
-                { name: "Docker", icon: "🐳" },
-                { name: "Kubernetes", icon: "☸️" },
-                { name: "Terraform", icon: "🏗️" }
+                { name: "SQLite", icon: "🪶" },
+                { name: "DB", icon: "📁" },
+                { name: "DBeaver", icon: "🦫" }
             ]
         }
     ];

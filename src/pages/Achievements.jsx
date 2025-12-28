@@ -7,46 +7,32 @@ import './Achievements.css';
 const Achievements = () => {
     const achievements = [
         {
-            title: "Best AI Innovation Award",
-            organization: "Tech Excellence Summit 2023",
-            description: "Recognized for developing an innovative AI-powered solution that revolutionized customer service automation.",
+            title: "IIT Madras Shaastra",
+            organization: "AI/ML Challenge 2",
+            description: "Secured first place in the prestigious AI/ML challenge organized by IIT Madras, demonstrating advanced technical skills and problem-solving.",
             icon: "🏆",
             highlight: true
         },
         {
-            title: "Open Source Contributor",
-            organization: "GitHub",
-            description: "Top contributor to major open-source ML projects with 1000+ GitHub stars across repositories.",
-            icon: "⭐",
+            title: "Poster Designing",
+            organization: "National Level Competition",
+            description: "Winner of the national level poster designing competition, showcasing creativity and strong visual communication skills.",
+            icon: "🎨",
             highlight: false
         },
         {
-            title: "Hackathon Winner",
-            organization: "HackTech 2022",
-            description: "First place winner for building a real-time fraud detection system in 48 hours.",
-            icon: "🥇",
+            title: "Club Activity",
+            organization: "University Excellence",
+            description: "Awarded winner for outstanding contribution and leadership in university club activities and events.",
+            icon: "🌟",
+            highlight: false
+        },
+        {
+            title: "Techalthon",
+            organization: "IIITM",
+            description: "Finalist in the Techalthon competition by IIITM, competing with top talents in rapid product development and innovation.",
+            icon: "🚀",
             highlight: true
-        },
-        {
-            title: "Patent Holder",
-            organization: "US Patent Office",
-            description: "Co-inventor of a patented algorithm for efficient neural network compression.",
-            icon: "📜",
-            highlight: false
-        },
-        {
-            title: "Speaker at AI Conference",
-            organization: "AI World Summit 2023",
-            description: "Keynote speaker on 'The Future of Automation in Enterprise Systems'.",
-            icon: "🎤",
-            highlight: false
-        },
-        {
-            title: "Team Excellence Award",
-            organization: "Tech Innovations Inc.",
-            description: "Led a team that delivered a critical ML infrastructure 2 months ahead of schedule.",
-            icon: "👥",
-            highlight: false
         }
     ];
 

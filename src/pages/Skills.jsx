@@ -8,45 +8,32 @@ import './Skills.css';
 const Skills = () => {
     const skillCategories = [
         {
-            title: "Software & Backend",
-            icon: "⚙️",
+            title: "Development",
+            icon: "💻",
             category: "backend",
             skills: [
-                "Python", "Java", "Node.js", "Go", "Rust",
-                "REST APIs", "GraphQL", "Microservices",
-                "System Design", "Database Design"
+                "Software Development", "Backend Development",
+                "Website Development", "Mobile Development",
+                "Android Development"
             ]
         },
         {
-            title: "AI & Machine Learning",
+            title: "Artificial Intelligence",
             icon: "🧠",
             category: "ai",
             skills: [
-                "TensorFlow", "PyTorch", "Scikit-learn",
-                "Natural Language Processing", "Computer Vision",
-                "Deep Learning", "Neural Networks",
-                "Model Optimization", "MLOps"
+                "Machine Learning", "Artificial Intelligence",
+                "Deep Learning", "AI Agents",
+                "Natural Language Processing"
             ]
         },
         {
-            title: "Automation",
+            title: "Automation & Tools",
             icon: "🤖",
             category: "automation",
             skills: [
-                "CI/CD Pipelines", "Jenkins", "GitHub Actions",
-                "Ansible", "Terraform", "Docker",
-                "Kubernetes", "RPA", "Scripting"
-            ]
-        },
-        {
-            title: "Web & Mobile",
-            icon: "🌐",
-            category: "web",
-            skills: [
-                "React", "Next.js", "Vue.js",
-                "TypeScript", "HTML5", "CSS3",
-                "React Native", "Flutter",
-                "Progressive Web Apps"
+                "Automation", "Social Media Handling",
+                "Prompt Engineering", "RAG", "LLM Pipelines"
             ]
         }
     ];

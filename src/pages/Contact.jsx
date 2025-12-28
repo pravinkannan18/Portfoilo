@@ -5,8 +5,8 @@ import './Contact.css';
 
 const Contact = () => {
     const socialLinks = [
-        { name: "LinkedIn", url: "https://linkedin.com/in/pravin", color: "#0A66C2" },
-        { name: "GitHub", url: "https://github.com/pravin", color: "#FFFFFF" }
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/pravin18/", color: "#0A66C2" },
+        { name: "GitHub", url: "https://github.com/pravinkannan18", color: "#FFFFFF" }
     ];
 
     return (

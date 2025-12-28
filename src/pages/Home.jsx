@@ -7,7 +7,7 @@ import './Home.css';
 
 const Home = () => {
     const [displayedText, setDisplayedText] = useState('');
-    const fullText = "AI Engineer • Backend Developer • Automation Specialist";
+    const fullText = "AI Engineer • Software Developer • Automation Specialist";
 
     useEffect(() => {
         let index = 0;
@@ -36,17 +36,17 @@ const Home = () => {
     };
 
     const stats = [
-        { number: "2+", label: "Years Experience" },
-        { number: "15+", label: "Projects Completed" },
-        { number: "5+", label: "AI Models Deployed" },
-        { number: "100%", label: "Client Satisfaction" }
+        { number: "1+", label: "Years Experience" },
+        { number: "10+", label: "Projects Completed" },
+        { number: "5+", label: "AI Tools & Models" },
+        { number: "100%", label: "Dedication" }
     ];
 
     const techStack = [
         { name: "Python", icon: "🐍" },
         { name: "FastAPI", icon: "⚡" },
         { name: "React", icon: "⚛️" },
-        { name: "TensorFlow", icon: "🧠" },
+        { name: "LangChain", icon: "🔗" },
         { name: "PostgreSQL", icon: "🐘" },
         { name: "Docker", icon: "🐳" }
     ];
@@ -129,8 +129,11 @@ const Home = () => {
                         <AnimatedButton to="/experience" variant="primary" size="large">
                             View Experience →
                         </AnimatedButton>
-                        <AnimatedButton href="https://github.com/" variant="secondary" size="large">
-                            GitHub Profile
+                        <AnimatedButton href="https://github.com/pravinkannan18" variant="secondary" size="large">
+                            GitHub
+                        </AnimatedButton>
+                        <AnimatedButton href="https://www.linkedin.com/in/pravin18/" variant="secondary" size="large">
+                            LinkedIn
                         </AnimatedButton>
                     </motion.div>
 
@@ -205,10 +208,9 @@ const Home = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        I'm a software developer with expertise in AI/ML, backend development, and automation.
-                        I love building products that solve real-world problems and make a meaningful impact.
-                        From designing robust APIs to training machine learning models, I bring ideas to life
-                        with clean, efficient code.
+                        I'm an AI Engineer and Software Developer passionate about creating intelligent solutions.
+                        With expertise in LLMs, backend automation, and modern web tech, I bridge the gap
+                        between complex AI models and scalable, user-centric applications.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

@@ -7,56 +7,31 @@ import './Experience.css';
 const Experience = () => {
     const experiences = [
         {
-            company: "Tech Innovations Inc.",
-            role: "Senior AI Engineer",
-            location: "San Francisco, CA",
-            duration: "2022 - Present",
+            company: "Kathaipetti",
+            role: "Software Developer",
+            location: "Onsite (Chennai, Tamil Nadu)",
+            duration: "May 2025 - Jul 2025",
             description: [
-                "Led development of ML-powered recommendation engine serving 10M+ users",
-                "Architected scalable microservices infrastructure on AWS/GCP",
-                "Implemented CI/CD pipelines reducing deployment time by 60%",
-                "Mentored team of 5 junior engineers on AI/ML best practices"
+                "Developed and integrated AI-powered features for a children's storytelling platform, enhancing user experience and engagement.",
+                "Built and optimized backend APIs, routing, and service integrations, including LLM-based pipelines for story summarization and puzzle generation.",
+                "Implemented TTS models and reduced costs by integrating open-source alternatives.",
+                "Created gamification APIs and visual prompt generation using LLaMA 3.3, Groq, and Hugging Face tools."
             ],
-            techStack: ["Python", "TensorFlow", "PyTorch", "AWS", "Kubernetes", "Docker"]
+            techStack: ["Python", "FastAPI", "SQL", "RAG", "LLMs", "TTS", "Prompt Engineering"]
         },
         {
-            company: "DataFlow Systems",
-            role: "Backend Developer",
-            location: "New York, NY",
-            duration: "2020 - 2022",
+            company: "StarHome Enterprises",
+            role: "AI Specialist",
+            location: "Chennai, Tamil Nadu",
+            duration: "Present",
             description: [
-                "Built RESTful APIs handling 100K+ requests per minute",
-                "Designed and optimized PostgreSQL database schemas",
-                "Developed real-time data processing pipelines with Apache Kafka",
-                "Reduced API response time by 40% through caching strategies"
+                "Contributed to building and scaling the company's digital and brand presence by applying generative AI, automation, and modern web technologies.",
+                "Designed and produced high-quality advertising creatives, including AI-generated images and short-form videos.",
+                "Developed and managed an AI-powered brand ambassador for faster content delivery and improved audience engagement.",
+                "Led end-to-end website development focusing on modern UI/UX, performance optimization, and seamless workflow integration.",
+                "Handled social media strategy and operations using AI-driven insights for content planning and creative generation."
             ],
-            techStack: ["Node.js", "Python", "PostgreSQL", "Redis", "Kafka", "GraphQL"]
-        },
-        {
-            company: "AutomateX Solutions",
-            role: "Automation Engineer",
-            location: "Austin, TX",
-            duration: "2018 - 2020",
-            description: [
-                "Created automated testing frameworks reducing QA time by 70%",
-                "Developed RPA solutions for enterprise workflow automation",
-                "Built custom monitoring dashboards with real-time analytics",
-                "Integrated third-party APIs for seamless data synchronization"
-            ],
-            techStack: ["Python", "Selenium", "Jenkins", "Ansible", "Grafana", "Prometheus"]
-        },
-        {
-            company: "StartupHub",
-            role: "Full Stack Developer",
-            location: "Remote",
-            duration: "2016 - 2018",
-            description: [
-                "Developed responsive web applications using React and Node.js",
-                "Implemented user authentication and authorization systems",
-                "Built RESTful APIs and integrated with frontend applications",
-                "Collaborated with UX team to improve user experience"
-            ],
-            techStack: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "CSS"]
+            techStack: ["Nano Banana", "Pika", "Kling AI", "ChatGPT", "Grok", "Generative AI"]
         }
     ];
 

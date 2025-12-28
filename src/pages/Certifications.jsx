@@ -7,52 +7,28 @@ import './Certifications.css';
 const Certifications = () => {
     const certifications = [
         {
-            title: "AWS Solutions Architect Professional",
-            issuer: "Amazon Web Services",
-            icon: "☁️",
-            color: "#FF9900"
+            title: "IBM Certification in ML with Python",
+            issuer: "IBM",
+            icon: "🤖",
+            color: "#054ADA"
         },
         {
-            title: "Google Cloud Professional ML Engineer",
-            issuer: "Google Cloud",
-            icon: "🌈",
-            color: "#4285F4"
-        },
-        {
-            title: "TensorFlow Developer Certificate",
-            issuer: "Google",
-            icon: "🧠",
-            color: "#FF6F00"
-        },
-        {
-            title: "Kubernetes Administrator (CKA)",
-            issuer: "CNCF",
-            icon: "☸️",
-            color: "#326CE5"
-        },
-        {
-            title: "Azure AI Engineer Associate",
-            issuer: "Microsoft",
-            icon: "🔷",
-            color: "#0089D6"
-        },
-        {
-            title: "MongoDB Developer Certificate",
-            issuer: "MongoDB University",
-            icon: "🍃",
-            color: "#47A248"
-        },
-        {
-            title: "Docker Certified Associate",
-            issuer: "Docker Inc.",
-            icon: "🐳",
-            color: "#2496ED"
-        },
-        {
-            title: "Deep Learning Specialization",
+            title: "ChatGPT Prompt Engineering",
             issuer: "DeepLearning.AI",
-            icon: "📚",
-            color: "#EE4C2C"
+            icon: "💬",
+            color: "#10A37F"
+        },
+        {
+            title: "Git and GitHub Certification",
+            issuer: "GitHub",
+            icon: "🐙",
+            color: "#181717"
+        },
+        {
+            title: "Python for Data Science",
+            issuer: "NPTEL",
+            icon: "📊",
+            color: "#2C3E50"
         }
     ];
 
