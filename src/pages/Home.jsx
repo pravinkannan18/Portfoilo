@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ParticleBackground from '../components/ParticleBackground';
 import AnimatedButton from '../components/AnimatedButton';
 import PageTransition from '../components/PageTransition';
+import { BrainCircuit, Rocket, Wrench, Heart, Github, Linkedin, Code2, Database, Box, Cpu } from 'lucide-react';
 import './Home.css';
 
 const Home = () => {
@@ -36,19 +37,19 @@ const Home = () => {
     };
 
     const stats = [
-        { number: "1+", label: "Years Experience" },
-        { number: "10+", label: "Projects Completed" },
-        { number: "5+", label: "AI Tools & Models" },
-        { number: "100%", label: "Dedication" }
+        { number: "1+", label: "Years Experience", icon: <Rocket size={40} /> },
+        { number: "10+", label: "Projects Completed", icon: <Wrench size={40} /> },
+        { number: "5+", label: "AI Tools & Models", icon: <BrainCircuit size={40} /> },
+        { number: "100%", label: "Dedication", icon: <Heart size={40} /> }
     ];
 
-    const techStack = [
-        { name: "Python", icon: "🐍" },
-        { name: "FastAPI", icon: "⚡" },
-        { name: "React", icon: "⚛️" },
-        { name: "LangChain", icon: "🔗" },
-        { name: "PostgreSQL", icon: "🐘" },
-        { name: "Docker", icon: "🐳" }
+    const techStackPreview = [
+        { name: "Python", icon: <Code2 />, color: "#3776AB" },
+        { name: "FastAPI", icon: <Cpu />, color: "#05998B" },
+        { name: "React", icon: <Box />, color: "#61DAFB" },
+        { name: "LangChain", icon: <BrainCircuit />, color: "#000000" },
+        { name: "PostgreSQL", icon: <Database />, color: "#4169E1" },
+        { name: "Docker", icon: <Box />, color: "#2496ED" }
     ];
 
     return (
@@ -130,10 +131,10 @@ const Home = () => {
                             View Experience →
                         </AnimatedButton>
                         <AnimatedButton href="https://github.com/pravinkannan18" variant="secondary" size="large">
-                            GitHub
+                            <Github size={20} /> GitHub
                         </AnimatedButton>
                         <AnimatedButton href="https://www.linkedin.com/in/pravin18/" variant="secondary" size="large">
-                            LinkedIn
+                            <Linkedin size={20} /> LinkedIn
                         </AnimatedButton>
                     </motion.div>
 
@@ -168,6 +169,7 @@ const Home = () => {
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ scale: 1.05, y: -5 }}
                         >
+                            <span className="stat-icon">{stat.icon}</span>
                             <span className="stat-number">{stat.number}</span>
                             <span className="stat-label">{stat.label}</span>
                         </motion.div>
@@ -250,7 +252,7 @@ const Home = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    {techStack.map((tech, index) => (
+                    {techStackPreview.map((tech, index) => (
                         <motion.div
                             key={index}
                             className="tech-card"
@@ -260,7 +262,7 @@ const Home = () => {
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ scale: 1.1, rotate: 2 }}
                         >
-                            <span className="tech-icon">{tech.icon}</span>
+                            <span className="tech-icon" style={{ color: tech.color }}>{tech.icon}</span>
                             <span className="tech-name">{tech.name}</span>
                         </motion.div>
                     ))}

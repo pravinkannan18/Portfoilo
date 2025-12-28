@@ -1,7 +1,4 @@
-import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
-import SectionHeader from '../components/SectionHeader';
-import GlassCard from '../components/GlassCard';
+import { FileCheck2, Cpu, GraduationCap, Github, Code2 } from 'lucide-react';
 import './Certifications.css';
 
 const Certifications = () => {
@@ -9,25 +6,25 @@ const Certifications = () => {
         {
             title: "IBM Certification in ML with Python",
             issuer: "IBM",
-            icon: "🤖",
+            icon: <Cpu />,
             color: "#054ADA"
         },
         {
             title: "ChatGPT Prompt Engineering",
             issuer: "DeepLearning.AI",
-            icon: "💬",
+            icon: <GraduationCap />,
             color: "#10A37F"
         },
         {
             title: "Git and GitHub Certification",
             issuer: "GitHub",
-            icon: "🐙",
+            icon: <Github />,
             color: "#181717"
         },
         {
             title: "Python for Data Science",
             issuer: "NPTEL",
-            icon: "📊",
+            icon: <Code2 />,
             color: "#2C3E50"
         }
     ];

@@ -68,17 +68,32 @@
 }
 
 .social-link-card {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: 14px 28px;
     background: var(--color-card);
     border: 3px solid var(--color-text-primary);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-hard);
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.external-icon {
+    font-size: 1rem;
+    margin-left: auto;
+    opacity: 0.5;
+}
+
+.social-name {
     color: var(--color-text-primary);
     font-weight: 700;
     text-transform: uppercase;
-    box-shadow: var(--shadow-hard-sm);
-    transition: all var(--transition-bounce);
 }
 
 .social-link-card:hover {

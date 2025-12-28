@@ -3,13 +3,14 @@ import PageTransition from '../components/PageTransition';
 import SectionHeader from '../components/SectionHeader';
 import GlassCard from '../components/GlassCard';
 import SkillBadge from '../components/SkillBadge';
+import { Code2, BrainCircuit, Cpu } from 'lucide-react';
 import './Skills.css';
 
 const Skills = () => {
     const skillCategories = [
         {
             title: "Development",
-            icon: "💻",
+            icon: <Code2 />,
             category: "backend",
             skills: [
                 "Software Development", "Backend Development",
@@ -19,7 +20,7 @@ const Skills = () => {
         },
         {
             title: "Artificial Intelligence",
-            icon: "🧠",
+            icon: <BrainCircuit />,
             category: "ai",
             skills: [
                 "Machine Learning", "Artificial Intelligence",
@@ -29,7 +30,7 @@ const Skills = () => {
         },
         {
             title: "Automation & Tools",
-            icon: "🤖",
+            icon: <Cpu />,
             category: "automation",
             skills: [
                 "Automation", "Social Media Handling",
