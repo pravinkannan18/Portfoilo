@@ -1,0 +1,53 @@
+.glass-card-component {
+    position: relative;
+    background: var(--color-card);
+    border: 3px solid var(--color-text-primary);
+    overflow: hidden;
+    transition: all var(--transition-bounce);
+    box-shadow: var(--shadow-hard);
+}
+
+.glass-card-component.hoverable {
+    cursor: pointer;
+}
+
+.glass-card-component.hoverable:hover {
+    border-color: var(--color-neon-blue);
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.8);
+}
+
+.glass-card-component.glowing {
+    animation: neonPulse 3s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+
+    0%,
+    100% {
+        box-shadow: var(--shadow-hard), 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: var(--shadow-hard), 0 0 30px rgba(255, 61, 138, 0.4);
+    }
+}
+
+.glow-effect {
+    display: none;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    padding: var(--spacing-xl);
+}
+
+/* Size Variants */
+.glass-card-component.compact .card-content {
+    padding: var(--spacing-md);
+}
+
+.glass-card-component.large .card-content {
+    padding: var(--spacing-2xl);
+}

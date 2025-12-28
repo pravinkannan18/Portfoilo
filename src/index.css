@@ -1,0 +1,493 @@
+/* ===================================
+   PRAVIN'S PORTFOLIO - NEO-BRUTALIST
+   Y2K Retro-Futurism + Scrapbook Style
+   =================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@400;500;600;700&display=swap');
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Neo-Brutalist Color Palette */
+  --color-base: #0B0F1A;
+  --color-surface: #14181F;
+  --color-card: #1A1F2E;
+  --color-card-hover: #242A3D;
+
+  /* Neon Accent Colors */
+  --color-neon-blue: #00D4FF;
+  --color-neon-yellow: #E5FF00;
+  --color-neon-pink: #FF3D8A;
+  --color-neon-green: #39FF14;
+
+  /* Text Colors */
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #8B8B9A;
+  --color-text-muted: #5A5A6A;
+
+  /* Gradients */
+  --gradient-neon: linear-gradient(135deg, #00D4FF 0%, #FF3D8A 50%, #E5FF00 100%);
+  --gradient-blue-pink: linear-gradient(135deg, #00D4FF 0%, #FF3D8A 100%);
+  --gradient-yellow-pink: linear-gradient(135deg, #E5FF00 0%, #FF3D8A 100%);
+
+  /* Hard Shadows (Neo-Brutalist) */
+  --shadow-hard: 8px 8px 0px rgba(0, 0, 0, 0.8);
+  --shadow-hard-sm: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  --shadow-hard-lg: 12px 12px 0px rgba(0, 0, 0, 0.8);
+  --shadow-neon-blue: 0 0 20px rgba(0, 212, 255, 0.5);
+  --shadow-neon-pink: 0 0 20px rgba(255, 61, 138, 0.5);
+  --shadow-neon-yellow: 0 0 20px rgba(229, 255, 0, 0.5);
+
+  /* Typography */
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-handwritten: 'Caveat', cursive;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-base);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Grain Texture Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Outlined Text */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-text-primary);
+  text-stroke: 2px var(--color-text-primary);
+}
+
+.text-outline-neon {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-neon-blue);
+  text-stroke: 2px var(--color-neon-blue);
+}
+
+/* Handwritten Style */
+.handwritten {
+  font-family: var(--font-handwritten);
+  font-size: 1.5em;
+  color: var(--color-neon-yellow);
+}
+
+/* Code/Mono Text */
+code,
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-card);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== UTILITIES ===== */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.text-gradient {
+  background: var(--gradient-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tilted Elements */
+.tilt-left {
+  transform: rotate(-2deg);
+}
+
+.tilt-right {
+  transform: rotate(2deg);
+}
+
+.tilt-slight-left {
+  transform: rotate(-1deg);
+}
+
+.tilt-slight-right {
+  transform: rotate(1deg);
+}
+
+/* ===== STICKER STYLES ===== */
+.sticker {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-neon-yellow);
+  color: var(--color-base);
+  font-weight: 700;
+  border: 3px solid var(--color-base);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-hard-sm);
+  transform: rotate(-2deg);
+}
+
+.sticker-blue {
+  background: var(--color-neon-blue);
+}
+
+.sticker-pink {
+  background: var(--color-neon-pink);
+}
+
+/* ===== CARD STYLES ===== */
+.brutalist-card {
+  background: var(--color-card);
+  border: 3px solid var(--color-text-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hard);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-bounce);
+}
+
+.brutalist-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* Polaroid Style Card */
+.polaroid-card {
+  background: #FAFAFA;
+  padding: var(--spacing-md);
+  padding-bottom: var(--spacing-2xl);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-hard);
+}
+
+.polaroid-card .content {
+  background: var(--color-card);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid var(--color-base);
+  cursor: pointer;
+  transition: all var(--transition-bounce);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--color-neon-yellow);
+  color: var(--color-base);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.btn-primary:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-neon-blue);
+  color: var(--color-base);
+  border-color: var(--color-base);
+  transform: translate(-4px, -4px);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.btn-neon {
+  background: var(--color-neon-pink);
+  color: var(--color-base);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rotate, 0deg));
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(var(--rotate, 0deg));
+  }
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes pulse-neon {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+  }
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+/* ===== TAPE ELEMENTS ===== */
+.tape {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  background: rgba(255, 255, 200, 0.7);
+  transform: rotate(-45deg);
+  z-index: 10;
+}
+
+.tape-top-left {
+  top: -10px;
+  left: -10px;
+}
+
+.tape-top-right {
+  top: -10px;
+  right: -10px;
+  transform: rotate(45deg);
+}
+
+/* ===== TORN PAPER EDGE ===== */
+.torn-edge {
+  position: relative;
+}
+
+.torn-edge::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0 10 Q5 0 10 10 T20 10 T30 10 T40 10 T50 10 T60 10 T70 10 T80 10 T90 10 T100 10 V0 H0 Z' fill='%230B0F1A'/%3E%3C/svg%3E") repeat-x;
+  background-size: 50px 20px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neon-blue);
+  border: 2px solid var(--color-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-pink);
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--color-neon-yellow);
+  color: var(--color-base);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .brutalist-card {
+    box-shadow: var(--shadow-hard-sm);
+  }
+}

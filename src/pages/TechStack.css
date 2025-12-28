@@ -1,0 +1,103 @@
+.techstack-page {
+    min-height: 100vh;
+    padding: calc(80px + var(--spacing-3xl)) 0 var(--spacing-3xl);
+    background:
+        radial-gradient(ellipse at 30% 30%, rgba(255, 61, 138, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 70%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
+}
+
+.tech-category {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.tech-category:last-child {
+    margin-bottom: 0;
+}
+
+.tech-category-title {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-base);
+    background: var(--color-neon-pink);
+    padding: 8px 20px;
+    margin-bottom: var(--spacing-xl);
+    border: 3px solid var(--color-base);
+    box-shadow: var(--shadow-hard-sm);
+    transform: rotate(-1deg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tech-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background: var(--color-card);
+    border: 3px solid var(--color-text-primary);
+    cursor: default;
+    transition: all var(--transition-bounce);
+    box-shadow: var(--shadow-hard-sm);
+}
+
+.tech-tile:nth-child(odd) {
+    transform: rotate(-0.5deg);
+}
+
+.tech-tile:nth-child(even) {
+    transform: rotate(0.5deg);
+}
+
+.tech-tile:hover {
+    border-color: var(--color-neon-blue);
+    transform: translate(-3px, -3px) rotate(0deg);
+    box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.8);
+    background: var(--color-card-hover);
+}
+
+.tech-icon {
+    font-size: 2rem;
+}
+
+.tech-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--color-text-primary);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .techstack-page {
+        padding: calc(70px + var(--spacing-2xl)) 0 var(--spacing-2xl);
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: var(--spacing-sm);
+    }
+
+    .tech-tile {
+        padding: var(--spacing-md);
+        box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
+        transform: none !important;
+    }
+
+    .tech-icon {
+        font-size: 1.5rem;
+    }
+
+    .tech-name {
+        font-size: 0.7rem;
+    }
+}
