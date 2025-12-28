@@ -1,3 +1,7 @@
+import { motion } from 'framer-motion';
+import PageTransition from '../components/PageTransition';
+import SectionHeader from '../components/SectionHeader';
+import GlassCard from '../components/GlassCard';
 import { FileCheck2, Cpu, GraduationCap, Github, Code2 } from 'lucide-react';
 import './Certifications.css';
 
