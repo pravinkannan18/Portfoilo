@@ -23,7 +23,7 @@ const Experience = () => {
             company: "StarHome Enterprises",
             role: "AI Specialist",
             location: "Chennai, Tamil Nadu",
-            duration: "Present",
+            duration: "Sep 2025 - Oct 2025",
             description: [
                 "Contributed to building and scaling the company's digital and brand presence by applying generative AI, automation, and modern web technologies.",
                 "Designed and produced high-quality advertising creatives, including AI-generated images and short-form videos.",
